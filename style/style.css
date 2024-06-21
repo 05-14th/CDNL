@@ -1,0 +1,39 @@
+{
+  border: 1px solid red;
+}
+
+p {
+  text-align: justify;
+}
+
+.auto-w {
+  width: clamp(200px, 50%, 800px);
+}
+
+.auto-form {
+  width: clamp(250px, 50%, 600px);
+}
+
+.email-area {
+  display: flex;
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("/static/bg1.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+main{
+  padding: 2%;
+  border-radius: 15px;
+  width: 80%;
+}
+
+.w {
+  background-color: white;
+}
