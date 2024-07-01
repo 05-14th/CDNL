@@ -12,24 +12,26 @@
 
 <body class="layout-1">
   <main class="w">
-    <div class="auto-w-pc">
-      <h2 class="text-center">Subscribe to CodeDemonz Newsletter</h2>
-      <img src="/static/logo1.png" alt="CodeDemonz Logo" class="d-block mx-auto auto-w" />
-    </div>
-    <div>
-      <p class="mx-auto w-75">The <b>CodeDemonz Newsletter</b> features latest events and articles about gaming and technology that suites the interest of the developer and audiences.</p>
-    
-      <form action="/submit" method="POST" class="d-block mx-auto h-75 w-75">
-        <div class="mb-3">
-          <div class="d-flex flex-row">
-            <input type="email" name="email" id="email" class="p-2 form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email" required>
-            <button type="submit" class="p-2 btn btn-primary">Submit</button>
+    <section>
+      <div class="auto-w-pc">
+        <h2 class="text-center">Subscribe to CodeDemonz Newsletter</h2>
+        <img src="/static/logo1.png" alt="CodeDemonz Logo" class="d-block mx-auto auto-w" />
+      </div>
+      <div>
+        <p class="mx-auto w-75">The <b>CodeDemonz Newsletter</b> features latest events and articles about gaming and technology that suites the interest of the developer and audiences.</p>
+      
+        <form action="/submit" method="POST" class="d-block mx-auto h-75 w-75">
+          <div class="mb-3">
+            <div class="d-flex flex-row">
+              <input type="email" name="email" id="email" class="p-2 form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email" required>
+              <button type="submit" class="p-2 btn btn-primary">Submit</button>
+            </div>
+            <div id="emailHelp" class="form-text text-center">{{.RowCount}} subscribers are waiting for you to join</div>
           </div>
-          <div id="emailHelp" class="form-text text-center">{{.RowCount}} subscribers are waiting for you to join</div>
-        </div>
-    
-      </form>
-    </div>
+      
+        </form>
+      </div>
+    </section>
   </main>
 </body>
 
