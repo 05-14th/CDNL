@@ -1,1 +1,0 @@
-Bading si Jelo
