@@ -1,14 +1,14 @@
 package main
 
 import (
-    "database/sql"
-    "fmt"
-    "html/template"
-    "log"
-    "net/http"
-    "time"
+	"database/sql"
+	"fmt"
+	"html/template"
+	"log"
+	"net/http"
+	"time"
 
-    _ "github.com/lib/pq"
+	_ "github.com/lib/pq"
 )
 
 const (
@@ -37,7 +37,7 @@ func submitEmailHandler(w http.ResponseWriter, r *http.Request) {
     var db *sql.DB
     if r.Method == http.MethodPost {
         email := r.FormValue("email")
-        
+
         if email == "" {
             http.Error(w, "Email is required", http.StatusBadRequest)
             return
@@ -120,7 +120,7 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 func main() {
     fs := http.FileServer(http.Dir("./static"))
 	  http.Handle("/static/", http.StripPrefix("/static/", fs))
-	  
+
 	  stylefs := http.FileServer(http.Dir("./style"))
 	  http.Handle("/style/", http.StripPrefix("/style/", stylefs))
 
