@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import logo from "./static/logo1.png";
 import bg from "./static/bg1.jpeg";
+import { useNavigate } from "react-router-dom";
 
 function StartingPage() {
   const [subscriberCount, setSubscriberCount] = useState(0);
+  const navigate = useNavigate();
   const handleSubmit = (event) => {
     event.preventDefault();
     setSubscriberCount(subscriberCount + 1);
+    navigate("/main");
   };
 
   return (
